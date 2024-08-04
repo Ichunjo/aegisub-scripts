@@ -1,0 +1,46 @@
+{
+    "dependencyControlFeedFormatVersion": "0.2.0",
+    "name": "Vardë's Automation Scripts",
+    "description": "Main repository for all of Vardë's automation scripts.",
+    "maintainer": "Vardë",
+    "knownFeeds": {
+      "a-mo": "https://raw.githubusercontent.com/TypesettingTools/Aegisub-Motion/DepCtrl/DependencyControl.json"
+    },
+    "baseUrl": "https://github.com/Ichunjo/aegisub-scripts",
+    "url": "@{baseUrl}",
+    "fileBaseUrl": "https://raw.githubusercontent.com/Ichunjo/aegisub-scripts",
+    "macros": {
+      "vd.baguettisation": {
+          "url": "@{baseUrl}#@{namespace}",
+        "fileBaseUrl": "@{fileBaseUrl}/@{channel}/macros/@{namespace}",
+        "author": "Vardë",
+        "name": "baguettisation",
+        "description": "Remplace les tirets courts des dialogues en tirets longs et gère la marge auto",
+        "channels": {
+          "master": {
+            "version": "1.6.0",
+            "released": "2024-08-04",
+            "default": true,
+            "files": [
+              {
+                "name": ".lua",
+                "url": "@{fileBaseUrl}@{fileName}",
+                "sha1": "BBF2B7E3D05F6A031B6377DD69DD6A52FC41D771"
+              }
+            ],
+            "requiredModules": [
+                {
+                    "moduleName": "YUtils"
+                },
+                {
+                    "moduleName": "moonscript.util"
+                }
+            ]
+          }
+        },
+        "changelog": {
+          "1.6.0": ["Initial release"]
+        }
+      }
+    }
+  }
