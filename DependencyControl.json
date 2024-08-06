@@ -15,14 +15,14 @@
         "description": "Handle dialogue stuff",
         "channels": {
           "master": {
-            "version": "1.7.0",
+            "version": "1.7.1",
             "released": "2024-08-06",
             "default": true,
             "files": [
               {
                 "name": ".lua",
                 "url": "@{fileBaseUrl}@{fileName}",
-                "sha1": "371F91699CB0429F1F8C39CCA6E2847FB864DD28"
+                "sha1": "B942F1D311EB58341D984F01F030FCB7E995BF63"
               }
             ],
             "requiredModules": [
@@ -40,7 +40,8 @@
         },
         "changelog": {
           "1.6.0": ["Initial release"],
-          "1.7.0": ["Overhaul"]
+          "1.7.0": ["Overhaul"],
+          "1.7.1": ["Fixe save and delete buttons"]
         }
       }
     }
