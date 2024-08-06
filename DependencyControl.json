@@ -1,11 +1,8 @@
 {
     "dependencyControlFeedFormatVersion": "0.2.0",
-    "name": "Vardë's Automation Scripts",
-    "description": "Main repository for all of Vardë's automation scripts.",
-    "maintainer": "Vardë",
-    "knownFeeds": {
-      "a-mo": "https://raw.githubusercontent.com/TypesettingTools/Aegisub-Motion/DepCtrl/DependencyControl.json"
-    },
+    "name": "Varde's Automation Scripts",
+    "description": "Main repository for all of Varde's automation scripts.",
+    "maintainer": "Varde",
     "baseUrl": "https://github.com/Ichunjo/aegisub-scripts",
     "url": "@{baseUrl}",
     "fileBaseUrl": "https://raw.githubusercontent.com/Ichunjo/aegisub-scripts",
@@ -13,33 +10,37 @@
       "vd.baguettisation": {
           "url": "@{baseUrl}#@{namespace}",
         "fileBaseUrl": "@{fileBaseUrl}/@{channel}/macros/@{namespace}",
-        "author": "Vardë",
+        "author": "Varde",
         "name": "baguettisation",
         "description": "Remplace les tirets courts des dialogues en tirets longs et gère la marge auto",
         "channels": {
           "master": {
-            "version": "1.6.0",
-            "released": "2024-08-04",
+            "version": "1.7.0",
+            "released": "2024-08-06",
             "default": true,
             "files": [
               {
                 "name": ".lua",
                 "url": "@{fileBaseUrl}@{fileName}",
-                "sha1": "BBF2B7E3D05F6A031B6377DD69DD6A52FC41D771"
+                "sha1": "371F91699CB0429F1F8C39CCA6E2847FB864DD28"
               }
             ],
             "requiredModules": [
-                {
-                    "moduleName": "YUtils"
-                },
-                {
-                    "moduleName": "moonscript.util"
-                }
+              {
+                  "moduleName": "YUtils"
+              },
+              {
+                  "moduleName": "moonscript.util"
+              },
+              {
+                "moduleName": "aegisub.re"
+              }
             ]
           }
         },
         "changelog": {
-          "1.6.0": ["Initial release"]
+          "1.6.0": ["Initial release"],
+          "1.7.0": ["Overhaul"]
         }
       }
     }
