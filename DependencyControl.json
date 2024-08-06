@@ -12,7 +12,7 @@
         "fileBaseUrl": "@{fileBaseUrl}/@{channel}/macros/@{namespace}",
         "author": "Varde",
         "name": "Baguettisation",
-        "description": "Remplace les tirets courts des dialogues en tirets longs et gère la marge auto",
+        "description": "Handle dialogue stuff",
         "channels": {
           "master": {
             "version": "1.7.0",
