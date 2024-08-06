@@ -1,3 +1,6 @@
+---@meta
+
+
 ---@class Line
 ---@field start_time integer
 ---@field end_time integer
@@ -18,3 +21,12 @@
 ---@class Styles
 ---@field n integer
 ---@field [string] Style
+
+---@class karaskel
+karaskel = {}
+
+---Collect styles and metadata from the subs
+---@param subs Subs
+---@param generate_furigana boolean?
+---@return Meta, Styles
+function karaskel.collect_head(subs, generate_furigana) end
