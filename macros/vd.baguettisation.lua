@@ -559,13 +559,15 @@ Please choose another name]])
             end
         end
     elseif btn == BUTTONS.SAVE then
-        if not DEFAULT_CONFIG.presets[res.name] then
+        if not DEFAULT_CONFIG.presets[res.name] and not DEFAULT_CONFIG.presets[res.preset_sel] then
             config.c.presets[name] = nil
             config.c.presets[res.name] = {}
             config:update_presets(diag, res)
             config:write()
+            configure(subs, nil, nil, res.name)
+        else
+            configure(subs, nil, nil, res.preset_sel)
         end
-        configure(subs, nil, nil, res.name)
     elseif btn == BUTTONS.LOAD then
         configure(subs, nil, nil, res.preset_sel)
     elseif btn == BUTTONS.DELETE then
@@ -575,7 +577,7 @@ Please choose another name]])
             -- local preset = config:getSectionHandler({"config", "presets", res.preset_sel}, DEFAULT_CONFIG)
             -- preset:delete()
         end
-        configure(subs, nil, nil, res.name)
+        configure(subs, nil, nil, nil)
     elseif btn == BUTTONS.CANCEL then
         aegisub.cancel()
     end
