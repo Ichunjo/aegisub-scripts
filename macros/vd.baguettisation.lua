@@ -1,6 +1,6 @@
 script_name = "Baguettisation"
 script_description = "Handle dialogue stuff"
-script_version = "1.7.0"
+script_version = "1.7.1"
 script_author = "Vardë"
 script_namespace = "vd.Baguettisation"
 
