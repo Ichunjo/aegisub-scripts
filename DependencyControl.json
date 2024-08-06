@@ -1,5 +1,5 @@
 {
-    "dependencyControlFeedFormatVersion": "0.2.0",
+    "dependencyControlFeedFormatVersion": "0.3.0",
     "name": "Varde's Automation Scripts",
     "description": "Main repository for all of Varde's automation scripts.",
     "maintainer": "Varde",
@@ -7,11 +7,11 @@
     "url": "@{baseUrl}",
     "fileBaseUrl": "https://raw.githubusercontent.com/Ichunjo/aegisub-scripts",
     "macros": {
-      "vd.baguettisation": {
+      "vd.Baguettisation": {
           "url": "@{baseUrl}#@{namespace}",
         "fileBaseUrl": "@{fileBaseUrl}/@{channel}/macros/@{namespace}",
         "author": "Varde",
-        "name": "baguettisation",
+        "name": "Baguettisation",
         "description": "Remplace les tirets courts des dialogues en tirets longs et gère la marge auto",
         "channels": {
           "master": {
