@@ -295,8 +295,8 @@ local function reset_line(line, dash)
     line.text = re.sub(line.text, "- ", dash .. " ")
     line.text = re.sub(line.text, "-{", dash .. "{")
 
-    line.text = re.sub(line.text, "\\an8", "\\an7")
-    line.text = re.sub(line.text, "\\an1", "\\an2")
+    line.text = re.sub(line.text, "\\\\an8", "\\\\an7")
+    line.text = re.sub(line.text, "\\\\an2", "\\\\an1")
 
     return line
 end
