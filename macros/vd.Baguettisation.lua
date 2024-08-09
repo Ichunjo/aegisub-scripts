@@ -423,6 +423,8 @@ local function baguette(subs, sel, res)
                     elseif line.style == res.sn_default_ita then
                         line.style = res.sn_default_dia_ita
                     end
+                elseif res.sn_default_ita == res.sn_default and line.style == res.sn_default then
+                    line.style = res.sn_default_dia
                 elseif line.style == res.sn_default_ita or line.style == res.sn_default_dia_ita then
                     line.style = res.sn_default_dia_ita
                 else
