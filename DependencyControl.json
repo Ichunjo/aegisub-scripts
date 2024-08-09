@@ -15,14 +15,14 @@
         "description": "Handle dialogue stuff",
         "channels": {
           "master": {
-            "version": "1.7.2",
-            "released": "2024-08-09",
+            "version": "1.7.3",
+            "released": "2024-08-10",
             "default": true,
             "files": [
               {
                 "name": ".lua",
                 "url": "@{fileBaseUrl}@{fileName}",
-                "sha1": "5E34741459DC67079863C3D8920F260418097127"
+                "sha1": "CBBB39993F1FDFAAD7884898451A13A7ACDB83F7"
               }
             ],
             "requiredModules": [
@@ -42,7 +42,8 @@
           "1.6.0": ["Initial release"],
           "1.7.0": ["Overhaul"],
           "1.7.1": ["Fix save and delete buttons"],
-          "1.7.2": ["Fix italic dialogue style taking priority over dialogue if default == italic"]
+          "1.7.2": ["Fix italic dialogue style taking priority over dialogue if default == italic"],
+          "1.7.3": ["Fix an8 and an2 not being replaced by an7 and an1 when they are explicitely set"]
         }
       }
     }
