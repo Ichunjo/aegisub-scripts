@@ -15,14 +15,14 @@
         "description": "Handle dialogue stuff",
         "channels": {
           "master": {
-            "version": "1.7.3",
-            "released": "2024-08-10",
+            "version": "1.7.4",
+            "released": "2024-08-29",
             "default": true,
             "files": [
               {
                 "name": ".lua",
                 "url": "@{fileBaseUrl}@{fileName}",
-                "sha1": "CBBB39993F1FDFAAD7884898451A13A7ACDB83F7"
+                "sha1": "35D786A3ADBDE0914BE540330B33CF6EF9B6D337"
               }
             ],
             "requiredModules": [
@@ -43,7 +43,8 @@
           "1.7.0": ["Overhaul"],
           "1.7.1": ["Fix save and delete buttons"],
           "1.7.2": ["Fix italic dialogue style taking priority over dialogue if default == italic"],
-          "1.7.3": ["Fix an8 and an2 not being replaced by an7 and an1 when they are explicitely set"]
+          "1.7.3": ["Fix an8 and an2 not being replaced by an7 and an1 when they are explicitely set"],
+          "1.7.4": ["Fix actors not being taken when using dialoguisation functions"]
         }
       }
     }
