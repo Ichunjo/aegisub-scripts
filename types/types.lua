@@ -6,6 +6,7 @@
 ---@field end_time integer
 ---@field duration number
 ---@field text string
+---@field actor string
 ---@field effect string
 ---@field style string
 ---@field margin_l integer

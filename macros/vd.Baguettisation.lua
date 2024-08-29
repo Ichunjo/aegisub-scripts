@@ -329,6 +329,10 @@ local dialoguisation = {
         line_a.text = "- " .. line_a.text .. "\\N- " .. line_b.text
         line_a.end_time = line_b.end_time
 
+        if line_a.actor ~= "" and line_b.actor ~= "" then
+            line_a.actor = line_a.actor .. "/" .. line_b.actor
+        end
+
         subs[i] = line_a
         -- subs[j] = nil
         subs.delete(j)
@@ -353,16 +357,26 @@ local dialoguisation = {
             if is_dialogue(line_clean, "-") then
                 local split_line = util.split(line.text:gsub('- ', ''), "\\N")
 
+                ---@type string[]
+                local actors
+                if line.actor ~= "" then
+                    actors = util.split(line.actor, "/")
+                else
+                    actors = {"", ""}
+                end
+
                 line.margin_l = 0
 
                 local end_time = line.end_time
                 line.end_time = line.start_time + (line.end_time - line.start_time) / 2
                 line.text = split_line[1]
+                line.actor = actors[1]
                 subs[i] = line
 
                 line.start_time = line.end_time
                 line.end_time = end_time
                 line.text = split_line[2]
+                line.actor = actors[2]
                 subs.insert(i + 1, line)
             end
         end
