@@ -498,11 +498,12 @@ local function prepare_baguette(subs, sel, _, name)
     local btn, res = aegisub.dialog.display(diag, {BUTTONS.OK, BUTTONS.LOAD, BUTTONS.CANCEL})
 
     if btn == BUTTONS.OK then
-        if res.preset_sel ~= res.name then
+        if res.preset_sel ~= diag.existing_presets.value then
             for key, value in pairs(config.c.presets[res.preset_sel]) do
                 res[key] = value
             end
         end
+
         baguette(subs, sel, res)
         res.name = "[Last Settings]"
         config:update_presets(diag, res)
