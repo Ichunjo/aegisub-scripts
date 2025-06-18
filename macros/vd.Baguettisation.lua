@@ -592,6 +592,12 @@ Please choose another name]])
             config:write()
             -- local preset = config:getSectionHandler({"config", "presets", res.preset_sel}, DEFAULT_CONFIG)
             -- preset:delete()
+        else
+            local btnw, _ = user_warning(tr"Can't delete preset", tr[[You can't delete a default preset.]])
+
+            if btnw == BUTTONS.CANCEL then
+                aegisub.cancel()
+            end
         end
         configure(subs, nil, nil, nil)
     elseif btn == BUTTONS.CANCEL then
