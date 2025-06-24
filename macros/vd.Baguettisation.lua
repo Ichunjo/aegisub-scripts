@@ -360,7 +360,12 @@ local dialoguisation = {
                 ---@type string[]
                 local actors
                 if line.actor ~= "" then
-                    actors = util.split(line.actor, "/")
+                    -- TODO: Add a config option in "Config" to customize the separators
+                    if string.find(line.actor, "/") then
+                        actors = util.split(line.actor, "/")
+                    elseif string.find(line.actor, "+") then
+                        actors = util.split(line.actor, "+")
+                    end
                 else
                     actors = {"", ""}
                 end
