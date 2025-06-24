@@ -15,14 +15,14 @@
         "description": "Handle dialogue stuff",
         "channels": {
           "master": {
-            "version": "1.7.5",
-            "released": "2025-06-18",
+            "version": "1.7.6",
+            "released": "2025-06-24",
             "default": true,
             "files": [
               {
                 "name": ".lua",
                 "url": "@{fileBaseUrl}@{fileName}",
-                "sha1": "7F78514D6E16256C009F0617C3A226D659C7BAEA"
+                "sha1": "055A89BA64C4EEED69761B97001EE2A927D05ECD"
               }
             ],
             "requiredModules": [
@@ -48,7 +48,8 @@
           "1.7.5": [
             "Fix existing preset dropdown always taking priority over custop dropdown value selected by the user. ",
             "Add a warning when the user wants to delete a default preset."
-          ]
+          ],
+          "1.7.6": ["Add \"+\" separator to Undialogue script."]
         }
       }
     }
